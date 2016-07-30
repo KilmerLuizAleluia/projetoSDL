@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
 			@session = Session.new
 		else
 			@session = Session.new.find(params[:id])
+		end
 	end
 
 	def index
