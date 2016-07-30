@@ -1,25 +1,59 @@
-<%= form_for @session do |f| %>
-  <p>
-    <%= f.label :client %><br>
-    <%= f.text_field :client %>
-  </p>
- 
-  <p>
-    <%= f.label :data %><br>
-    <%= f.datetime_field :data %>
-  </p>
- 
-  <p>
-    <%= f.label :imagem %><br>
-    <%= f.text_field :imagem %>
-  </p>
+<body class="container"> 
+	<div class="header clearfix">
+		<nav class="navbar navbar-static-top navbar-dark bg-inverse">
+			<a class="navbar-brand" href="#">Estúdio Bilson's</a>
+			<ul class="nav navbar-nav">
+		        <li class="nav-item active">
+		        	<%= link_to 'Visualizar sessões', sessions_path %>
+		        </li>
+		        <li class="nav-item">
+		        	<%= link_to 'Marcar Sessão', new_session_path %>
+		        </li>
+		      </ul>
+		</nav>
+	</div>
 
-  <p>
-    <%= f.label :tamanho %><br>
-    <%= f.text_field :tamanho %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="">
+				<h2>Marcar Sessão</h2>
+			</div>
+			<br><br>
+			<div >
+				<%= form_for @session, :html => {:class => "form-horizontal center"} do |f| %>
+					<div class="form-gorup">
+						<%= f.label :client, class: "control-label col-sm-2" %>
+						<div class="col-sm-10">
+							<%= f.text_field :client, class: "form-control" %>
+						</div>
+					</div>
+					<br><br>
+					<div class="form-gorup">
+						<%= f.label :data, class: "control-label col-sm-2" %>
+						<div class="col-sm-10">
+							<%= f.datetime_field :data, class: "form-control" %>
+						</div>
+					</div>
+					<br><br>
+					<div class="form-gorup">
+						<%= f.label :imagem, class: "control-label col-sm-2"  %>
+						<div class="col-sm-10">
+							<%= f.text_field :imagem, class: "form-control" %>
+						</div>
+					</div>
+					<br><br>
+					<div class="form-gorup">
+						<%= f.label :tamanho, class: "control-label col-sm-2"  %>
+						<div class="col-sm-10">
+							<%= f.text_field :tamanho, class: "form-control" %>
+						</div>
+					</div>
+					<br><br>
+					<div style="float: right;" class="col-sm-6">
+						<%= f.submit "Marcar sessão", class: "btn btn-default" %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</body>

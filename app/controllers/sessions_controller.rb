@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
 	def new 
-		@session = Session.new
+		if params[:id] == nil
+			@session = Session.new
+		else
+			@session = Session.new.find(params[:id])
 	end
 
 	def index
