@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client: MyString
+  data: 2016-07-30 13:16:32
+  imagem: MyString
+  tamanho: MyString
+
+two:
+  client: MyString
+  data: 2016-07-30 13:16:32
+  imagem: MyString
+  tamanho: MyString

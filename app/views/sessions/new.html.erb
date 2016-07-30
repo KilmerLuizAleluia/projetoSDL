@@ -1,0 +1,25 @@
+<%= form_for @session do |f| %>
+  <p>
+    <%= f.label :client %><br>
+    <%= f.text_field :client %>
+  </p>
+ 
+  <p>
+    <%= f.label :data %><br>
+    <%= f.datetime_field :data %>
+  </p>
+ 
+  <p>
+    <%= f.label :imagem %><br>
+    <%= f.text_field :imagem %>
+  </p>
+
+  <p>
+    <%= f.label :tamanho %><br>
+    <%= f.text_field :tamanho %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
