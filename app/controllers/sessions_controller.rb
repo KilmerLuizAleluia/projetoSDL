@@ -4,13 +4,13 @@ class SessionsController < ApplicationController
 	end
 
 	def index
-		@session = Session.new.all
+		@sessions = Session.all
 	end
 
 	def create
-		@session = Session.new params.require(:session).permit(:client)
+		@session = Session.new params.require(:session).permit(:client, :data, :imagem, :tamanho)
 		@session.save
-		redirect_to new_session_path
+		redirect_to sessions_path
 	end
 end
 

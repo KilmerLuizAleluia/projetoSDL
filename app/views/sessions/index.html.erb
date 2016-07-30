@@ -1,3 +1,12 @@
-<% sessions.each do |session| %>
-  <%= session.client %>
-<% end %>
+<div class="jumbotron">
+	<div class="container">
+		<h2>Sessões marcadas</h2>
+		<% @sessions.each do |session| %>
+		  <li><%= session.client %></li>
+		  <li><%= session.data.strftime("%d/%m/%y: %H:%M:%S") %></li>
+		  <li><%= session.imagem %></li>
+		  <li><%= session.tamanho %></li>
+		  <br/>
+		<% end %>
+	</div>
+</div>
