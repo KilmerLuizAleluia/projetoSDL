@@ -28,7 +28,11 @@
 					  	<td class="row"><%= session.data.strftime("%d/%m/%y: %H:%M:%S") %></td>
 					  	<td class="row"><%= session.imagem %></td>
 					  	<td class="row"><%= session.tamanho %></td>
-					  	<td> <%= link_to("Editar", edit_session_path(session.id)) %></td>
+					  	<td> 
+					  		<%= link_to("Editar", edit_session_path(session.id)) %>
+					  		<br>
+					  		<%= link_to("Cancelar (todo)", edit_session_path(session.id)) %>
+					  	</td>
 				  	</tr>
 					<% end %>
 			  	</table>
