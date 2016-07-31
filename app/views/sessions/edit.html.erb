@@ -1,0 +1,27 @@
+<body class="container"> 
+	<div class="header clearfix">
+		<nav class="navbar navbar-static-top navbar-dark bg-inverse">
+			<a class="navbar-brand" href="#">Estúdio Bilson's</a>
+			<ul class="nav navbar-nav">
+		        <li class="nav-item active">
+		        	<%= link_to 'Visualizar sessões', sessions_path %>
+		        </li>
+		        <li class="nav-item">
+		        	<%= link_to 'Marcar Sessão', new_session_path %>
+		        </li>
+		      </ul>
+		</nav>
+	</div>
+
+	<div class="jumbotron">
+		<div class="container">
+			<div class="">
+				<h2>Editar Sessão</h2>
+			</div>
+			<br><br>
+			<div >
+				<%=render 'form'  %>
+			</div>
+		</div>
+	</div>
+</body>

@@ -1,0 +1,33 @@
+<%= form_for @session, :html => {:class => "form-horizontal center"} do |f| %>
+					<div class="form-gorup">
+						<%= f.label :client, class: "control-label col-sm-2" %>
+						<div class="col-sm-10">
+							<%= f.text_field :client, class: "form-control" %>
+						</div>
+					</div>
+					<br><br>
+					<div class="form-gorup">
+						<%= f.label :data, class: "control-label col-sm-2" %>
+						<div class="col-sm-10">
+							<%= f.datetime_field :data, class: "form-control" %>
+						</div>
+					</div>
+					<br><br>
+					<div class="form-gorup">
+						<%= f.label :imagem, class: "control-label col-sm-2"  %>
+						<div class="col-sm-10">
+							<%= f.text_field :imagem, class: "form-control" %>
+						</div>
+					</div>
+					<br><br>
+					<div class="form-gorup">
+						<%= f.label :tamanho, class: "control-label col-sm-2"  %>
+						<div class="col-sm-10">
+							<%= f.text_field :tamanho, class: "form-control" %>
+						</div>
+					</div>
+					<br><br>
+					<div style="float: right;" class="col-sm-6">
+						<%= f.submit "Marcar sessão", class: "btn btn-default" %>
+					</div>
+				<% end %>
